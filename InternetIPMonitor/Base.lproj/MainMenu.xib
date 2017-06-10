@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1510" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="clearMarkedMenuItem" destination="LPP-aP-Y48" id="PW9-aU-n7z"/>
+                <outlet property="markBadMenuItem" destination="Ua2-nH-KlY" id="gTt-tO-yuU"/>
+                <outlet property="markGoodMenuItem" destination="Uzh-Yf-BWT" id="0M4-cc-ZBl"/>
+                <outlet property="markUnclassifiedMenuItem" destination="erG-Dh-4Kc" id="S2o-mu-OJ2"/>
+                <outlet property="statusMenu" destination="8nu-A9-xeX" id="0HA-fg-NxZ"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="8nu-A9-xeX" userLabel="statusBarMenuResource">
+            <items>
+                <menuItem title="Mark Good" id="Uzh-Yf-BWT">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="onMarkGood:" target="Voe-Tx-rLC" id="NXc-A7-Aq1"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Mark Bad" id="Ua2-nH-KlY">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="onMarkBad:" target="Voe-Tx-rLC" id="e85-Lo-sMz"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Mark Unclassified" id="erG-Dh-4Kc">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="onMarkUnclassified:" target="Voe-Tx-rLC" id="ROv-Sz-FIN"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="0Ad-jw-MOS"/>
+                <menuItem title="Clear Marked IPs" id="LPP-aP-Y48">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="onClearMarked:" target="Voe-Tx-rLC" id="omT-4n-gEE"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="gxS-Tt-jmJ"/>
+                <menuItem title="Quit" id="clj-VH-KDQ" userLabel="statusBarMenuResource">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="terminate:" target="-1" id="aEX-HR-tXL"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <accessibility description="Status Bar Menu" identifier="statusBarMenuResource"/>
+            <connections>
+                <outlet property="delegate" destination="-3" id="ElN-87-P0A"/>
+            </connections>
+            <point key="canvasLocation" x="47" y="-1.5"/>
+        </menu>
+        <userDefaultsController representsSharedInstance="YES" id="pAR-cl-5fP"/>
+    </objects>
+</document>
